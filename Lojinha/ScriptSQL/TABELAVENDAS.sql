@@ -1,0 +1,27 @@
+CREATE TABLE VENDAS (
+[CODIGO] [INT] IDENTITY (1,1) NOT NULL,
+    DATA DATETIME,
+    QUANTIDADE INT,
+    FATURADO BIT,
+    CODIGOCLIENTE INT,
+    CODIGOPRODUTO INT,
+CONSTRAINT [PK_VENDAS] PRIMARY KEY CLUSTERED
+(
+    [CODIGO]
+    ) ON [PRIMARY], CONSTRAINT [FR_ Codigo_Cliente] Foreign key
+    (
+    [CODIGOCLIENTE]
+    ) REFERENCES [Clientes] ( [Codigo]
+),
+CONSTRAINT [FK_Codigo_Produto] Foreign key
+(
+    [CODIGOPRODUTO]
+) REFERENCES  [Produtos] (
+    [Codigo]
+    )
+) ON [PRIMARY]
+GO
+
+
+
+
