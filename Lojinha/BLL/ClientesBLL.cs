@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,8 +35,21 @@ namespace Lojinha.BLL
             cliente.Email = cliente.Email.ToLower();
             //Se está tudo OK, chama a rotina de alteração
             ClientesDAL obj = new ClientesDAL();
-            obj.Cliente(cliente);
-
+            obj.Alterar(cliente);
+        }
+        public void Excluir(int codigo)
+        {
+            if (codigo < 1)
+            {
+                throw new Exception("Selecione um cliente antes de excluir");
+            }
+            ClientesDAL obj = new ClientesDAL();
+            obj.Excluir(codigo);
+        }
+        public DataTable Listagem(string filtro)
+        {
+            ClientesDAL obj = new ClientesDAL();
+            return obj.Listagem(filtro);
         }
     }
 }
