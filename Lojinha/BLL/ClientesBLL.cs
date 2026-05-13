@@ -21,7 +21,7 @@ namespace Lojinha.BLL
             cliente.Email = cliente.Email.ToLower();
             //Se está tudo OK, chama a rotina de inserção
             ClientesDAL obj = new ClientesDAL();
-            obj.incluir(cliente);
+            obj.Incluir(cliente);
         }
         public void Alterar(ClienteInformation cliente)
         {
@@ -34,7 +34,7 @@ namespace Lojinha.BLL
             cliente.Email = cliente.Email.ToLower();
             //Se está tudo OK, chama a rotina de alteração
             ClientesDAL obj = new ClientesDAL();
-            obj.(cliente);
+            obj.Cliente(cliente);
 
         }
     }

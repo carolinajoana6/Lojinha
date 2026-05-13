@@ -57,7 +57,7 @@ namespace Lojinha.DAL
                 cn.Close();
             }
         }
-        //Alterar clientes
+        //Alterar Clientes
         public void Alterar(ClienteInformation cliente)
         {
             //Conexão com o banco de dados
