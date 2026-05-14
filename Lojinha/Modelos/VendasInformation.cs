@@ -7,43 +7,19 @@ using System.Windows.Forms;
 
 namespace Lojinha.Modelos
 {
-    internal class VendasInformation
+    public class VendasInformation
     {
         private int _codigo;
-        public int Codigo
-        {
-            get { return _codigo; }
-            set { _codigo = value; }
-        }
+        public int Codigo { get; set; }
         private DateTime _data;
-        public DateTime Data
-        {
-            get { return _data; }
-            set { _data = value; }
-        }
-        private int  _quantidade;
-        public int  Quantidade  
-        {
-            get { return _quantidade; }
-            set { _quantidade = value; }
-        }
+        public DateTime Data { get; set; }
+        private int _quantidade;
+        public int Quantidade { get; set; }
         private bool _faturado;
-        public bool Faturado
-        {
-            get { return _faturado; }
-            set { _faturado = value; }
-        }
+        public bool Faturado { get; set; }
         private int _codigocliente;
-        public int Codigocliente
-        {
-            get { return _codigocliente; }
-            set { _codigocliente = value; }
-        }
+        public int Codigocliente { get; set; }
         private int _codigoproduto;
-        public int Codigoproduto
-        {
-            get { return _codigoproduto; }
-            set { _codigoproduto = value; }
-        }
+        public int Codigoproduto { get; set; }
     }
 }
