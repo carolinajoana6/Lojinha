@@ -11,7 +11,7 @@ namespace Lojinha.DAL
 {
     public class VendasDAL
     {
-        public void incluir(VendasInformation vendas)
+        public void Incluir(VendasInformation vendas)
         {
             //Conexão com o banco de dados
             SqlConnection cn = new SqlConnection(Dados.StringConexao);
@@ -39,7 +39,7 @@ namespace Lojinha.DAL
                 cmd.Parameters.Add(pfaturado);
 
                 SqlParameter pcodigoProduto = new SqlParameter("@codigoProduto", SqlDbType.Int);
-                pcodigoProduto.Value = vendas.CodigoProduto;
+                pcodigoProduto.Value = vendas.Codigoproduto;
                 cmd.Parameters.Add(pcodigoProduto);
                 cn.Open();
                 cmd.ExecuteNonQuery();
@@ -59,7 +59,7 @@ namespace Lojinha.DAL
                 cn.Close();
             }
         }
-        public void alterar(VendasInformation vendas)
+        public void Alterar(VendasInformation vendas)
         {
             //Conexão com o banco de dados
             SqlConnection cn = new SqlConnection(Dados.StringConexao);
@@ -87,7 +87,7 @@ namespace Lojinha.DAL
                 cmd.Parameters.Add(pfaturado);
 
                 SqlParameter pcodigoProduto = new SqlParameter("@codigoProduto", SqlDbType.Int);
-                pcodigoProduto.Value = vendas.CodigoProduto;
+                pcodigoProduto.Value = vendas.Codigoproduto;
                 cmd.Parameters.Add(pcodigoProduto);
 
                 cn.Open();
@@ -153,7 +153,7 @@ namespace Lojinha.DAL
                 pfiltro.Value = filtro;
                 cmd.Parameters.Add(pfiltro);
                 cn.Open();
-                DataTable tabela = new DataTable();
+               // DataTable tabela = new DataTable();
                 tabela.Load(cmd.ExecuteReader());
                 return tabela;
             }
