@@ -106,7 +106,7 @@ namespace Lojinha.DAL
                 cn.Close();
             }
         }
-        public void excluir(int codigo)
+        public void Excluir(int codigo)
         {
             //Conexão com o banco de dados
             SqlConnection cn = new SqlConnection(Dados.StringConexao);
@@ -137,7 +137,7 @@ namespace Lojinha.DAL
                 cn.Close();
             }
         }
-        public DataTable listagem(string filtro)
+        public DataTable Listagem(string filtro)
         {
             DataTable tabela = new DataTable();
             //Conexão com o banco de dados
