@@ -13,7 +13,9 @@ namespace Lojinha.DAL
         {
             get
             {
-                return "server = Data Source=PCAURORA;Initial Catalog=dblojinha;Integrated Security=True;Encrypt=False;Trust Server Certificate=True";
+                // return @"Data Source=PCAURORA;Initial Catalog=dblojinha;Integrated Security=True;Encrypt=False;TrustServerCertificate=True";
+
+                return "Server=PCAURORA;Database=dblojinha;Trusted_Connection=True;Encrypt=False;TrustServerCertificate=True";
             }
         }
     }
