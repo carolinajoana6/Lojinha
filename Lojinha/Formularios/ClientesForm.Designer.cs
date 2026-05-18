@@ -147,6 +147,7 @@
             this.listagemButton.TabIndex = 11;
             this.listagemButton.Text = "Listagem";
             this.listagemButton.UseVisualStyleBackColor = true;
+            this.listagemButton.Click += new System.EventHandler(this.listagemButton_Click);
             // 
             // limparButton
             // 
