@@ -147,7 +147,8 @@ namespace Lojinha.DAL
                 cmd.Parameters.Add(pfiltro);
                 cn.Open();
                 DataTable tabela = new DataTable();
-                tabela.Load(cmd.ExecuteReader());
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(tabela);
                 return tabela;
             }
             catch (Exception ex)
