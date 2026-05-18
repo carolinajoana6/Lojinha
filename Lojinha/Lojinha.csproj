@@ -153,23 +153,51 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\ClientesBLL.cs" />
+    <Compile Include="BLL\ProdutosBLL.cs" />
     <Compile Include="DAL\ClientesDAL.cs" />
     <Compile Include="DAL\Dados.cs" />
     <Compile Include="DAL\ProdutosDAL.cs" />
     <Compile Include="DAL\VendasDAL.cs" />
+    <Compile Include="Formularios\BuscaClientesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\BuscaClientesForm.Designer.cs">
+      <DependentUpon>BuscaClientesForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\ClientesForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\ClientesForm.Designer.cs">
       <DependentUpon>ClientesForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\PrincipalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\PrincipalForm.Designer.cs">
+      <DependentUpon>PrincipalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\ProdutosForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\ProdutosForm.Designer.cs">
+      <DependentUpon>ProdutosForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modelos\ClienteInformation.cs" />
     <Compile Include="Modelos\ProdutosInformation.cs" />
     <Compile Include="Modelos\VendasInformation.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\BuscaClientesForm.resx">
+      <DependentUpon>BuscaClientesForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\ClientesForm.resx">
       <DependentUpon>ClientesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\PrincipalForm.resx">
+      <DependentUpon>PrincipalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\ProdutosForm.resx">
+      <DependentUpon>ProdutosForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -181,6 +209,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="Class1.cd" />
+    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
